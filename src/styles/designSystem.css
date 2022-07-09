@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap");
+
+:root {
+  --h1: 4.5rem;
+  --h2: 3.5rem;
+  --h3: 2.5rem;
+  --h4: 2rem;
+  --h5: 1rem;
+
+  --label: 12px;
+
+  --DMSans: "DM Sans", sans-serif;
+  --DMSerifDisplay: "DM Serif Display", serif;
+}
+
+.label {
+  font-family: var(--DMSans);
+  font-size: 14px;
+  letter-spacing: 4px;
+  line-height: 125%;
+}
+
+.heading-1 {
+  font-size: var(--h1);
+}
+.heading-2 {
+  font-size: var(--h2);
+}
+.heading-3 {
+  font-size: var(--h3);
+}
+
+.interFontFamily {
+  font-family: var(--inter);
+}
+
+h1 {
+  font-size: var(--h2);
+  font-family: var(--inter);
+}
+
+@media (max-width: 900px) {
+  h1 {
+    font-size: var(--h5);
+  }
+}
