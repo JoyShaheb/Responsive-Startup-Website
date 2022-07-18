@@ -1,46 +1,166 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --h1: 4.5rem;
-  --h2: 3.5rem;
-  --h3: 2.5rem;
-  --h4: 2rem;
-  --h5: 1rem;
+  --h1: 2.5rem;
+  --h2: 2rem;
+  --h3: 1.75rem;
+  --h4: 1.5rem;
+  --h5: 1.25rem;
+  --h6: 1rem;
 
-  --label: 12px;
+  --sub: 1.25rem;
 
-  --DMSans: "DM Sans", sans-serif;
-  --DMSerifDisplay: "DM Serif Display", serif;
+  --label: 1rem;
+  --ls: 5px;
+
+  --body: 0.875rem;
+
+  --color-dark-100: rgba(33, 37, 41, 1);
+  --color-dark-75: rgba(33, 37, 41, 0.75);
+  --color-dark-50: rgba(33, 37, 41, 0.5);
+  --color-dark-25: rgba(33, 37, 41, 0.25);
+
+  --color-white-100: rgba(255, 255, 255, 1);
+  --color-white-75: rgba(255, 255, 255, 0.75);
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-white-25: rgba(255, 255, 255, 0.25);
+
+  --color-green-100: rgba(116, 198, 157, 1);
+  --color-green-75: rgba(116, 198, 157, 0.75);
+  --color-green-50: rgba(116, 198, 157, 0.5);
+  --color-green-25: rgba(116, 198, 157, 0.25);
+
+  --font-1: "Crimson Text", serif;
+  --font-2: "Work Sans", sans-serif;
+
+  --shadow-1: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
 }
+
+/**
+* ! Style rules for Label text
+**/
 
 .label {
-  font-family: var(--DMSans);
-  font-size: 14px;
-  letter-spacing: 4px;
-  line-height: 125%;
+  font-family: var(--font-2);
+  font-size: var(--label);
+  letter-spacing: var(--ls);
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.heading-1 {
+/**
+* ! Style rules for text colors
+**/
+
+.text-white {
+  color: var(--color-white-100);
+}
+
+.text-dark {
+  color: var(--color-dark-100);
+}
+
+.text-green {
+  color: var(--color-green-100);
+}
+
+/**
+* ! Style rules for buttons
+**/
+
+.white-btn,
+.dark-btn {
+  color: var(--color-dark-100);
+  background-color: var(--color-white-100);
+  font-family: var(--font-2);
+  font-size: var(--h5);
+  padding: 10px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.dark-btn {
+  color: var(--color-white-100);
+  background-color: var(--color-dark-100);
+}
+
+/**
+* ! Style rules for responsive images
+**/
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+* ! Common style rules
+**/
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.grid {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 25px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.common-title {
+  text-transform: capitalize;
+  font-family: var(--font-1);
   font-size: var(--h1);
-}
-.heading-2 {
-  font-size: var(--h2);
-}
-.heading-3 {
-  font-size: var(--h3);
+  font-weight: bold;
 }
 
-.interFontFamily {
-  font-family: var(--inter);
-}
+/**
+* ! Media query rules are here
+**/
 
-h1 {
-  font-size: var(--h2);
-  font-family: var(--inter);
-}
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
 
-@media (max-width: 900px) {
-  h1 {
-    font-size: var(--h5);
+  .common-title {
+    font-size: var(--h2);
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 740px;
+  }
+  .common-title {
+    font-size: var(--h4);
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+  .white-btn,
+  .dark-btn {
+    font-size: var(--h6);
+    padding: 8px 25px;
+  }
+}
+@media (max-width: 568px) {
+  .container {
+    max-width: 90%;
   }
 }
