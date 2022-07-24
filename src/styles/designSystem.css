@@ -37,6 +37,16 @@
 }
 
 /**
+* ! removing default styles of the browser 
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/**
 * ! Style rules for Label text
 **/
 
@@ -127,6 +137,10 @@
   font-size: var(--h1);
   font-weight: bold;
 }
+
+/**
+* ! Style rules for Navbar 
+*/
 
 /**
 * ! Media query rules are here

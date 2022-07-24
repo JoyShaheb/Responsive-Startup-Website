@@ -1,14 +1,4 @@
 /**
-* ! removing default styles of the browser 
-**/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/**
 * ! Style rules for Navbar
 **/
 
@@ -85,10 +75,6 @@
   align-self: center;
 }
 
-.sectionTwo__content--label {
-  color: var(--color-green-100);
-}
-
 .sectionTwo__content--text {
   font-size: var(--sub);
   font-family: var(--font-2);
@@ -125,7 +111,46 @@
 }
 
 /**
-* ! style rules for sectionThree
+* ! style rules for sectionFive
+**/
+
+.sectionFive__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+[class^="sectionFive__cards--"] {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: var(--shadow-1);
+  border-radius: 5px;
+  padding: 20px 25px;
+}
+
+[class^="sectionFive__cards--"] .name {
+  font-family: var(--font-1);
+  font-size: var(--h5);
+  font-weight: bold;
+}
+
+[class^="sectionFive__cards--"] .position {
+  font-family: var(--font-2);
+  color: var(--color-dark-75);
+  text-transform: uppercase;
+}
+
+.sectionFive__content--text {
+  font-size: var(--sub);
+  font-family: var(--font-2);
+}
+
+/**
+* ! style rules for footer
 **/
 
 .footerWrapper {
@@ -185,10 +210,16 @@
     align-items: center;
     gap: 20px;
   }
+  .sectionFive__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (max-width: 576px) {
   .sectionTwo__logo {
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
+  }
+  .sectionFive__cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
