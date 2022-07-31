@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 
 :root {
   --h1: 40px;
@@ -39,6 +40,10 @@
 /**
 * ! removing default styles of the browser 
 **/
+
+html {
+  overflow-x: hidden !important;
+}
 
 * {
   margin: 0;
@@ -139,8 +144,63 @@
 }
 
 /**
+* ! Style rules for Hero section 
+*/
+
+.hero {
+  background-color: var(--color-green-100);
+}
+
+/**
 * ! Style rules for Navbar 
 */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar__logo--text {
+  font-size: var(--h2);
+  font-family: var(--font-2);
+  color: var(--color-white-100);
+  font-weight: 500;
+}
+
+.navbar__menu {
+  display: flex;
+  font-family: var(--font-2);
+  font-size: var(--h5);
+  gap: 15px;
+}
+
+[class^="navbar__menu-"] {
+  text-decoration: none;
+  color: var(--color-white-100);
+}
+
+.navbar__icons {
+  display: none;
+}
+
+.navbar__icons i {
+  font-size: var(--h2);
+  color: var(--color-white-100);
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
 
 /**
 * ! Media query rules are here
@@ -171,6 +231,28 @@
   .dark-btn {
     font-size: var(--h6);
     padding: 8px 25px;
+  }
+
+  .navbar__menu {
+    background-color: var(--color-green-100);
+    position: absolute;
+    opacity: 100%;
+    top: 15vh;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .navbar__icons {
+    display: block;
+  }
+
+  .hidden {
+    opacity: 0%;
   }
 }
 @media (max-width: 568px) {

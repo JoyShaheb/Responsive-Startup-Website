@@ -18,11 +18,16 @@
         <img src="src/images/Logo/LogoWhite.svg" alt="" class="navbar__logo--image">
         <div class="navbar__logo--text">Start</div>
       </div>
-      <div class="navbar__menu">
-        <a href="" class="navbar__menu--1">About</a>
-        <a href="" class="navbar__menu--2">Portfolio</a>
-        <a href="" class="navbar__menu--3">Blog</a>
+      <div class="navbar__menu hidden">
+        <a href="index.html" class="navbar__menu--1">Home</a>
+        <a href="portfolio.html" class="navbar__menu--2">Portfolio</a>
+        <a href="" class="navbar__menu--3">Services</a>
         <a href="" class="navbar__menu--4">Contact</a>
+      </div>
+
+      <div class="navbar__icons">
+        <i class="bi bi-list"></i>
+        <i class="bi bi-x-lg hide"></i>
       </div>
     </div>
     <div class="sectionOne container grid">
@@ -81,7 +86,7 @@
     <img src="src/images/Home/image-3.svg" alt="" class="sectionFour__right responsive-image">
   </div>
 
-  <div class="sectionFive">
+  <div class="sectionFive container">
     <div class="sectionFive__content text-center">
       <div class="sectionFive__content--label label text-green">Teams</div>
       <div class="sectionFive__content--title common-title">Our teams</div>
@@ -89,7 +94,7 @@
         porro?
       </div>
     </div>
-    <div class="sectionFive__cards container">
+    <div class="sectionFive__cards">
       <div class="sectionFive__cards--1">
         <img class="responsive-image" src="src/images/team/Peg_Legge.svg" alt="">
         <div class="name">Peg Legge</div>
@@ -111,6 +116,7 @@
         <div class="position">developer</div>
       </div>
     </div>
+    <button class="sectionFive__btn dark-btn">View Team</button>
   </div>
 
   <div class="footerWrapper">
@@ -136,5 +142,6 @@
     </div>
   </div>
 </body>
+<script src="src/main.js"></script>
 
 </html>

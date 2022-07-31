@@ -1,45 +1,4 @@
 /**
-* ! Style rules for Navbar
-**/
-
-.hero {
-  background-color: var(--color-green-100);
-}
-
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.navbar__logo {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.navbar__logo--text {
-  font-size: var(--h2);
-  font-family: var(--font-2);
-  color: var(--color-white-100);
-  font-weight: 500;
-}
-
-.navbar__menu {
-  display: flex;
-  font-family: var(--font-2);
-  font-size: var(--h5);
-  gap: 15px;
-}
-
-[class^="navbar__menu-"] {
-  text-decoration: none;
-  color: var(--color-white-100);
-}
-
-/**
 * ! style rules for sectionOne
 **/
 
@@ -114,12 +73,17 @@
 * ! style rules for sectionFive
 **/
 
+.sectionFive {
+  display: grid;
+  gap: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
 .sectionFive__cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
-  margin-top: 30px;
-  margin-bottom: 40px;
 }
 
 [class^="sectionFive__cards--"] {
@@ -147,6 +111,10 @@
 .sectionFive__content--text {
   font-size: var(--sub);
   font-family: var(--font-2);
+}
+
+.sectionFive__btn {
+  justify-self: center;
 }
 
 /**
@@ -178,10 +146,6 @@
 **/
 
 @media (max-width: 1200px) {
-  .navbar__menu {
-    display: none;
-  }
-
   .sectionTwo__logo {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
