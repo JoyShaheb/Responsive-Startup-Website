@@ -41,10 +41,6 @@
 * ! removing default styles of the browser 
 **/
 
-html {
-  overflow-x: hidden !important;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -203,6 +199,30 @@ html {
 }
 
 /**
+* ! style rules for footer
+**/
+
+.footerWrapper {
+  background-color: var(--color-green-100);
+}
+
+.footerLinks {
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerLinks__socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footerLinks__copyright {
+  font-size: var(--sub);
+  font-family: var(--font-2);
+}
+
+/**
 * ! Media query rules are here
 **/
 
@@ -227,6 +247,10 @@ html {
   .container {
     max-width: 500px;
   }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
   .white-btn,
   .dark-btn {
     font-size: var(--h6);
@@ -234,6 +258,7 @@ html {
   }
 
   .navbar__menu {
+    z-index: 1;
     background-color: var(--color-green-100);
     position: absolute;
     opacity: 100%;
@@ -247,12 +272,22 @@ html {
     align-items: center;
     gap: 40px;
   }
+
+  .navbar__menu--1 {
+    margin-top: -200px;
+  }
   .navbar__icons {
     display: block;
   }
 
   .hidden {
+    z-index: -1;
     opacity: 0%;
+  }
+  .footerLinks {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }
 @media (max-width: 568px) {

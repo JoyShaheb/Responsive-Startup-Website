@@ -1,13 +1,22 @@
 .sectionOne {
+  margin-top: 25px;
+}
+
+.sectionOne__images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.sectionOne__content--text {
+  font-size: var(--sub);
+  font-family: var(--font-2);
 }
 
 @media (max-width: 568px) {
-  .sectionOne {
+  .sectionOne__images {
     grid-template-columns: repeat(1, 1fr);
   }
 }

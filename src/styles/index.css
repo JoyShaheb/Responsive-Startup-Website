@@ -39,6 +39,10 @@
   font-family: var(--font-2);
 }
 
+.sectionTwo__btn {
+  justify-self: center;
+}
+
 /**
 * ! style rules for sectionThree
 **/
@@ -118,30 +122,6 @@
 }
 
 /**
-* ! style rules for footer
-**/
-
-.footerWrapper {
-  background-color: var(--color-green-100);
-}
-
-.footerLinks {
-  padding: 40px 0;
-  display: flex;
-  justify-content: space-between;
-}
-
-.footerLinks__socials {
-  display: flex;
-  gap: 10px;
-}
-
-.footerLinks__copyright {
-  font-size: var(--sub);
-  font-family: var(--font-2);
-}
-
-/**
 * ! Adding media queries  
 **/
 
@@ -156,10 +136,6 @@
 }
 
 @media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 50px;
-  }
   .sectionOne__left,
   .sectionFour__left {
     order: 1;
@@ -169,11 +145,6 @@
     order: 0;
   }
 
-  .footerLinks {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
   .sectionFive__cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -181,7 +152,6 @@
 @media (max-width: 576px) {
   .sectionTwo__logo {
     grid-template-columns: repeat(1, 1fr);
-    gap: 40px;
   }
   .sectionFive__cards {
     grid-template-columns: repeat(1, 1fr);
