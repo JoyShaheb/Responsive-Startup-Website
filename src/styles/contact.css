@@ -1,0 +1,54 @@
+body {
+  display: grid;
+  min-height: 100vh;
+}
+.hero {
+  align-self: start;
+}
+.footerWrapper {
+  align-self: end;
+}
+
+.sectionOne {
+  margin-top: 15px;
+}
+
+.text {
+  font-family: var(--font-2);
+  font-size: var(--sub);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-family: var(--font-2);
+  font-size: var(--sub);
+}
+
+input,
+textarea {
+  padding: 10px 20px;
+  margin: 8px 0;
+  background-color: #eeeeee;
+  border: 1.5px solid #212529;
+  border-radius: 3px;
+}
+
+.submit-btn {
+  margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .sectionTwo__left {
+    order: 1;
+  }
+  .sectionTwo__right {
+    order: 0;
+  }
+}

@@ -1,7 +1,6 @@
 body {
   display: grid;
-  flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .hero {
@@ -23,6 +22,11 @@ body {
   font-family: var(--font-2);
   text-align: center;
   gap: 50px;
+}
+
+.sectionOne__content--text {
+  font-size: var(--sub);
+  font-family: var(--font-2);
 }
 
 [class^="sectionOne__cards--"] {
@@ -68,4 +72,23 @@ body {
 
 .dark-btn {
   justify-self: center;
+}
+
+@media (max-width: 1024px) {
+  .sectionOne__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionOne__cards {
+    grid-template-columns: repeat(1, 0.7fr);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 568px) {
+  .sectionOne__cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
